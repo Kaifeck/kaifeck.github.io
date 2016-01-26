@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "D3.js"
+date:   2016-01-26 17:54:11 +0100
+categories: javascript
+---
+<h1>D3.js</h1>
+D3.js ist eine Library für Javascript mit der sich Datensätze mittels HTML, CSS und SVG dynamisch auf der Seite darstellen lassen.
+Die Leichtigkeit, mit der sich Diagramme erstellen lassen, ist bemerkenswert.
+<br>
+<a href="http://d3js.org/">>>Hier gehts zu D3.js<<</a>
+<br>
+<blockquote>
+<img src="../../../../assets/d3.png">
+<p>Mit wenig code kann man viel machen</p>
+</blockquote>
+<h1>Barchart</h1>
+In einem Barchart kann man z.B. Statistiken auswerten.<br>
+<blockquote>Hier ist die X-Achse ist dann der Name des Datensatzes, Y-Achse die Anzahl
+<img src="../../../../assets/barchart.png"></blockquote>
+<h1>Maps</h1>
+Es lassen sich auch viele Datensätze auf eine Weltkarte anwenden.<br>
+<blockquote>Hier sind Punkte auf einer Karte markiert<br>
+<img src="../../../../assets/map.png"></blockquote>
+<h1>Pie Charts</h1>
+Mit dem klssischen Tortendiagramm lassen sich Prozentuale anteile sehr gut darstellen.<br>
+<blockquote>Hier mit einem Test-Datensatz<br>
+<img src="../../../../assets/piechart.png"></blockquote>
+<a href="https://github.com/mbostock/d3/wiki/Gallery">>>Mehr gibt es in der Gallerie zu sehen<<</a>
+<h1>Fazit</h1>
+D3.js kann einen zu Zeiten durchaus ärgern. Also so wirklich.<br>
+Aber wenn man den Bogen halbwegs dann mal raus hat, ist die Leichtigkeit, mit der man Datensätze
+darstellen kann, ein Luxus den man nicht mehr missen will.

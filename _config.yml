@@ -1,0 +1,19 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Ryan's Den of Debauchery
+email: rwels.mmt-b2014@fh-salzburg.ac.at
+description: > # this means to ignore newlines until "baseurl:"
+  This is the page I more or less did of my own accord for the subject
+  "Content Management System" at my University.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.wels.work" # the base hostname & protocol for your site
+github_username:  kaifeck
+
+# Build settings
+markdown: kramdown
