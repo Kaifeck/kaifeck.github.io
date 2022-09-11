@@ -1,0 +1,146 @@
+.container {
+  width: 300px;
+  height: 300px;
+  perspective: 1200px;
+  margin: 100px auto 0;
+
+}
+
+.cube {
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: bobbing 8s infinite linear;
+
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 47, 135, 0.2);
+    background-image: url("transparent.svg");
+    background-repeat: no-repeat;
+    background-size: 110% 110%;
+    border: 1px solid rgba(42, 80, 118, 0.3);
+
+    &.inactive *{
+      opacity: 0;
+    }
+
+    &.hide *{
+      animation: hide 0.4s 0.05s forwards;
+    }
+
+    &.show *{
+      animation: show 0.4s 0.05s forwards;
+    }
+
+
+    .profilepic {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border: 3px solid black;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      color: white;
+      font-size: 2em;
+    }
+  }
+
+  .top {
+    transform: rotateX(90deg) translateZ(150px);
+    display: flex;
+  }
+
+  .top img {
+  }
+
+  .bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+  }
+
+  .right {
+    transform: rotateY(90deg) translateZ(150px);
+  }
+
+  .left {
+    transform: rotateY(-90deg) translateZ(150px);
+  }
+
+  .front {
+    transform: rotateX(0deg) translateZ(150px);
+  }
+
+  .reflectionFace {
+    background-size: 200% 30%;
+    background-repeat: no-repeat;
+    animation: reflectionLine 8s linear infinite;
+    background-image: linear-gradient(110deg, rgba(25, 47, 135, 0.0) 53%,  rgba(190, 181, 181, 0.6) 55%, rgba(25, 47, 135, 0.0) 57%);
+    z-index: 10;
+  }
+
+  .back {
+    transform: rotateX(-180deg) translateZ(150px);
+  }
+}
+
+.xRotation, .yRotation, .zRotation, .container2 {
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50%;
+}
+
+.yRotation {
+  animation: rotationY 8s linear infinite;
+}
+
+.zRotation {
+  animation: rotationZ 8s linear infinite;
+}
+
+.xRotation {
+  animation: rotationX 8s linear infinite;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+}
+
+.righttext {
+  display: flex;
+  justify-content: center;
+  transform: translate(-100%, 0%) rotate(90deg);
+  transform-origin: right top;
+  position: absolute;
+  top: 95%;
+  left: 95%;
+  width: 100%;
+}
+
+.lefttext {
+  display: flex;
+  justify-content: center;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  position: absolute;
+  top: 95%;
+  left: 5%;
+  width: 100%;
+}
+
+.bottomtext {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
