@@ -3,32 +3,32 @@ import './scss/keyframes.scss';
 import './scss/cube.scss';
 import './scss/animationClasses.scss';
 
-const controlstick = document.querySelector('.controlStick');
-const container2 = document.querySelector('.container2');
-const reflectionFace = document.querySelector('.reflectionFace');
+const controlstick = document.querySelector('.controlStick') as HTMLElement;
+const container2 = document.querySelector('.container2') as HTMLElement;
+const reflectionFace = document.querySelector('.reflectionFace') as HTMLElement;
 //const audio = new Audio('IPL_11.wav');
 let count = 0;
 
 setInterval(() => {
 
-    if(controlstick.dataset.stickval != -1 && false) {
-        controlstick.dataset.stickval = -1
+    if(controlstick.dataset.stickval != '-1' && false) {
+        controlstick.dataset.stickval = '-1';
     } else {
         switch (countToFour()) {
             case 0:
-                controlstick.dataset.stickval = 0;
+                controlstick.dataset.stickval = '0';
                 controlstick.style.transform = 'rotate(90deg)';
                 break;
             case 1:
-                controlstick.dataset.stickval = 1;
+                controlstick.dataset.stickval = '1';
                 controlstick.style.transform = 'rotate(180deg)';
                 break;
             case 2:
-                controlstick.dataset.stickval = 2;
+                controlstick.dataset.stickval = '2';
                 controlstick.style.transform = 'rotate(270deg)';
                 break;
             case 3:
-                controlstick.dataset.stickval = 3;
+                controlstick.dataset.stickval = '3';
                 controlstick.style.transform = 'rotate(0deg)';
                 break;
         }
@@ -112,8 +112,8 @@ function updateFace(origin: string, target: string) {
     reflectionFace.classList.remove(origin);
     container2.dataset.turnState = target;
 
-    const activeFace = document.querySelector(`.${origin}:not(.reflectionFace)`);
-    const targetFace = document.querySelector(`.${target}:not(.reflectionFace)`);
+    const activeFace = document.querySelector(`.${origin}:not(.reflectionFace)`) as HTMLElement;
+    const targetFace = document.querySelector(`.${target}:not(.reflectionFace)`) as HTMLElement;
     activeFace.classList.add('hide');
     targetFace.classList.add('show');
     setTimeout(() => {
